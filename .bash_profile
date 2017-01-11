@@ -10,12 +10,9 @@ export PATH="/usr/local/sbin:$PATH"
 # Laravel
 export PATH=~/.composer/vendor/bin":$PATH"
 
-
-
-
 # Laravel aliases
 alias homestead_edit='atom ~/.homestead/Homestead.yaml'
-alias homestead_up='cd ~/Homestead/ && vagrant up --provision'
+alias homestead_up='cd ~/Homestead/ && vagrant up'
 alias homestead_halt='cd ~/Homestead/ && vagrant halt'
 alias homestead_provision='cd ~/Homestead/ && vagrant provision'
 alias homestead_ssh='cd ~/Homestead/ && vagrant ssh'
