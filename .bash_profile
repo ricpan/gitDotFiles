@@ -20,3 +20,9 @@ alias homestead_hosts='sudo vim /etc/hosts'
 alias vm='cd ~/Homestead/ && vagrant ssh'
 alias aa="php artisan"
 alias code="cd ~/Code"
+
+# Show git branch in terminal
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \[\033[32m\]\w - \$(parse_git_branch)\[\033[00m\] $ "
